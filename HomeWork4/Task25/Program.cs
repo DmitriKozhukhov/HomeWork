@@ -2,12 +2,12 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-int RaiseToPower (int number, int power)
+int RaiseToPower(int number, int power)
 {
     int result = 1;
     for (int i = 1; i <= power; i++)
     {
-        result = result*number;
+        result = result * number;
     }
     return result;
 }
