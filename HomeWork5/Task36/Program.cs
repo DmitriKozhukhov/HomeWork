@@ -27,16 +27,27 @@ void PrintArray(int[] array)
 int SumOfOddPositions(int[] array)
 {
     int sum = 0;
-    for (int i = 0; i < array.Length; i+=2)
+    for (int i = 0; i < array.Length; i += 2)
     {
-    sum+=array[i];
+        sum += array[i];
     }
     return sum;
 }
-int minValue = -10;
-int maxValue = 10;
+
+
 System.Console.WriteLine("Введите длину массива");
 int length = Convert.ToInt32(Console.ReadLine()!);
-int[] massive = CreateArray(minValue, maxValue, length);
-PrintArray(massive);
-System.Console.WriteLine($" -> {SumOfOddPositions(massive)}");
+System.Console.WriteLine("Введите нижнюю границу диапазона чисел в массиве");
+int minValue = Convert.ToInt32(Console.ReadLine()!);
+System.Console.WriteLine("Введите верхнюю границу диапазона чисел в массиве");
+int maxValue = Convert.ToInt32(Console.ReadLine()!);
+if (maxValue > minValue)
+{
+    int[] massive = CreateArray(minValue, maxValue, length);
+    PrintArray(massive);
+    System.Console.WriteLine($" -> {SumOfOddPositions(massive)}");
+}
+else
+{
+    System.Console.WriteLine($"Ошибка! Значение верхней границы массива должно быть, больше значения нижней границы массива");
+}
