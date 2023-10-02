@@ -35,13 +35,13 @@ int[,,] GetArrayOfRandoms(int[,,] array)
                 int temp = array[i, j, k];
                 while (isContain(newArray, temp) == true)
                 {
-                    temp = new Random().Next(10, 100);     
+                    temp = new Random().Next(10, 100);
                 }
                 newArray[i, j, k] = temp;
             }
         }
     }
-return newArray;
+    return newArray;
 }
 
 void PrintArray(int[,,] array)
@@ -83,7 +83,7 @@ int z = 3;
 int[,,] array = GetMatrix(x, y, z);
 int[,,] randArray = GetArrayOfRandoms(array);
 
-PrintArray(array);
-System.Console.WriteLine();
+//PrintArray(array);             для вывода изначального массива, 
+//System.Console.WriteLine();    с повторяющимеся элементами
 PrintArray(randArray);
 
