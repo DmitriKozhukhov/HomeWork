@@ -39,7 +39,6 @@ void RowSorting(int[,] array)
 {
     for (int k = 0; k < array.GetLength(1); k++)
     {
-
         for (int i = 0; i < array.GetLength(0); i++)
         {
             for (int j = 1; j < array.GetLength(1); j++)
@@ -52,10 +51,7 @@ void RowSorting(int[,] array)
                 }
             }
         }
-
     }
-
-
 }
 int[,] massive = GetArray(5, 4);
 PrintArray(massive);
